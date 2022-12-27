@@ -10,11 +10,19 @@
     <h1>This Keyword</h1>
   </body>
   <script>
-    const obj = {
-      fn: function () {
-        console.log(this);
-      },
+    const person1 = {
+      name: 'Everything',
     };
-    obj.fn();
+    const person2 = {
+      name: 'Fine',
+      quote: 'will react u soon',
+    };
+    function x() {
+      console.log(this);
+    }
+    x();
+    x.call(this);
+    x.call(person1);
+    x.call(person2);
   </script>
 </html>
